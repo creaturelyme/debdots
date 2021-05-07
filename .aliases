@@ -22,7 +22,7 @@ atashi=${orange}$(echo $USER | perl -pe 's/\b(.)/\u\1/g')${norm}
 koura=${green}$(echo $(basename "$SHELL") | perl -pe 's/\b(.)/\u\1/g')${norm}
 
 # Set path & prompt
-PATH='~/src/creaturely/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 PS1='${lite}\@\n${blue}\w ${orange}\$${norm} '
 
 # Exports
