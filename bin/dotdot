@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#dots=$(echo $HOME/.{bashrc.bash_profile,vimrc,aliases,functions,config/i3/config,xinitrc,xResources,keydirs,dircolors)
-
 git --git-dir=$HOME/.dot --work-tree=$HOME add $(echo $dots)
 git --git-dir=$HOME/.dot --work-tree=$HOME commit -m "$(date)"
 git --git-dir=$HOME/.dot --work-tree=$HOME push -u origin master
