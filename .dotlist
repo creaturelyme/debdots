@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "dots=$HOME/.{bashrc,bash_profile,vimrc,xResources,xinitrc,dotlist,keydirs,functions,aliases,dircolors,config/i3/config}" >> $HOME/.aliases

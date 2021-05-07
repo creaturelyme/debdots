@@ -1,0 +1,30 @@
+#!/bin/bash
+#~/.aliases
+
+dots=$(echo $HOME/.{bashrc,bash_profile,vimrc,Xresources,xinitrc,dotlist,keydirs,functions,aliases,dircolors,config/i3/config})
+
+alias ls='ls --color=auto'
+alias all='ls --color=auto -A'
+alias ..='cd ..'
+alias mkdirs='mkdir -p'
+
+# Personalized Variables
+red=$(tput setaf 88)
+green=$(tput setaf 107)
+blue=$(tput setaf 63)
+orange=$(tput setaf 166)
+mauve=$(tput setaf 138)
+norm=$(tput setaf 251)
+lite=$(tput setaf 245)
+kyou=${mauve}$(date +"%A, %B %eth")${norm}
+doko=${blue}$(pwd)${norm}
+atashi=${orange}$(echo $USER | perl -pe 's/\b(.)/\u\1/g')${norm}
+koura=${green}$(echo $(basename "$SHELL") | perl -pe 's/\b(.)/\u\1/g')${norm}
+
+# Set path & prompt
+PATH='~/src/creaturely/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+PS1='${lite}\@\n${blue}\w ${orange}\$${norm} '
+
+# Exports
+export dots red green blue orange mauve norm doko kyou atashi koura PATH PS1
+#export dot='/usr/bin/git --git-dir=/home/alex/.dot --work-tree=/home/alex'
