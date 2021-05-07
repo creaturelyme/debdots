@@ -2,4 +2,4 @@
 
 git --git-dir=$HOME/.dot --work-tree=$HOME add $(echo $dots)
 git --git-dir=$HOME/.dot --work-tree=$HOME commit -m "$(date)"
-git --git-dir=$HOME/.dot --work-tree=$HOME push origin -f debdots:current
+git --git-dir=$HOME/.dot --work-tree=$HOME push -ufv origin master
