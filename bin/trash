@@ -1,0 +1,5 @@
+[[ ! -z "$4" ]] && sudo mv -i $4 ~/.trash/$4 && printf "I've moved ${mauve}$4${norm} to the trash.\n"
+[[ ! -z "$3" ]] && sudo mv -i $3 ~/.trash/$3 && printf "I've moved ${mauve}$3${norm} to the trash.\n"
+[[ ! -z "$2" ]] && sudo mv -i $2 ~/.trash/$2 && printf "I've moved ${mauve}$2${norm} to the trash.\n"
+[[ $1 != "-e" ]] && sudo mv -i $1 ~/.trash/$1 && printf "I've moved ${mauve}$1${norm} to the trash.\n"
+[[ $1 == -e ]] && rm -rf ~/.trash && mkdir ~/.trash && echo "I've emptied the trash."

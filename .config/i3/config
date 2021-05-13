@@ -7,6 +7,8 @@ font pango:DejaVu Sans Mono 8
 default_border none
 hide_edge_borders both
 
+exec i3-sensible-terminal
+
 # exit i3
 bindsym $mod+q exec "i3-msg exit"
 
@@ -72,3 +74,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# create standard start-up workplaces
+#

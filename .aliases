@@ -1,7 +1,7 @@
 #!/bin/bash
 #~/.aliases
 
-dots=$(echo $HOME/{.bashrc,.bash_profile,.vimrc,.Xresources,.xinitrc,.keydirs,.functions,.aliases,.dircolors,.config/i3/config,bin/dotdot})
+dots=$(echo $HOME/{.bashrc,.bash_profile,.vimrc,.Xresources,.xinitrc,.aliases,.dircolors,.config/i3/config,bin/dotdot,bin/remove,bin/trash,bin/mkbin})
 
 alias ls='ls --color=auto'
 alias all='ls --color=auto -A'
@@ -21,9 +21,9 @@ doko=${blue}$(pwd)${norm}
 atashi=${orange}$(echo $USER | perl -pe 's/\b(.)/\u\1/g')${norm}
 koura=${green}$(echo $(basename "$SHELL") | perl -pe 's/\b(.)/\u\1/g')${norm}
 
-# Set path & prompt
-PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-PS1='${lite}\@\n${blue}\w ${orange}\$${norm} '
+#Set path & prompt
+#PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+#PS1='${lite}\@\n${blue}\w ${orange}\$${norm} '
 
 # Exports
-export dots red green blue orange mauve norm doko kyou atashi koura PATH PS1
+export dots red green blue orange mauve norm doko kyou atashi koura
