@@ -1,5 +1,3 @@
-#!/bin/bash
-
 git --git-dir=$HOME/.dot --work-tree=$HOME add $(echo $dots)
-git --git-dir=$HOME/.dot --work-tree=$HOME commit -m "$(date)"
+git --git-dir=$HOME/.dot --work-tree=$HOME commit -m "On $(date) the following files were automatically updated $(echo $dots)"
 git --git-dir=$HOME/.dot --work-tree=$HOME push -ufv origin master

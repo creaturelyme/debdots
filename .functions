@@ -1,26 +1,14 @@
 #!/bin/bash                                                                 
-#~/.functions: short utility scripts 
-
-#########################
-#   Throw away things   #
-#########################
-# trash - moves items to Trash, asking for permission to overwrite files and 
-# announcing when items have been successfully moved.
-
 trash() {
-# eventually create option menu based on ls -A ... [[ -z $1 ]] && 
-  sudo mv -i $1 ~/.Trash/$1 && printf "I've moved ${mauve}$1${norm} to the trash." 
+  sudo mv -i $1 ~/.trash/
+  printf "I've moved ${mauve}$1${norm} to the trash." 
   echo
 }
 
-# remove - recursively deletes up to 4 directories, then lists all items deleted in 
-# formatted columns.
-# remove foo.txt bar/foo .foo/foo foo
-
 remove() {
         printf "\n\t${norm}I've deleted these items: \n${mauve}"
-        [[ ! -z "$4" ]] && printf "\n$(rm -rfv $4 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
-        [[ ! -z "$3" ]] && printf "\n$(rm -rfv $3 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
-        [[ ! -z "$2" ]] && printf "\n$(rm -rfv $2 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
-        printf "\n$(rm -rfv $1 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')\n";
+        [[ ! -z "$4" ]] && printf "\n$(rm -rdfv $4 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+        [[ ! -z "$3" ]] && printf "\n$(rm -rdfv $3 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+        [[ ! -z "$2" ]] && printf "\n$(rm -rdfv $2 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+        printf "\n$(rm -rdfv $1 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')\n";
 }

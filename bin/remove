@@ -1,0 +1,5 @@
+printf "\n\t${norm}I've deleted these items: \n${mauve}"
+[[ ! -z "$4" ]] && printf "\n$(rm -rdfv $4 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+[[ ! -z "$3" ]] && printf "\n$(rm -rdfv $3 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+[[ ! -z "$2" ]] && printf "\n$(rm -rdfv $2 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')";
+printf "\n$(rm -rdfv $1 | column -c `tput cols` | column -t | sed '1,$s/^/   /g')\n"
